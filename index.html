@@ -8,20 +8,39 @@
     <script defer src="./script.js"></script>
 </head>
 <body>
-    <div id="game-board">
-        <div id="cell1" class="cell"></div>
-        <div id="cell2" class="cell"></div>
-        <div id="cell3" class="cell"></div>
-        <div id="cell4" class="cell"></div>
-        <div id="cell5" class="cell"></div>
-        <div id="cell6" class="cell"></div>
-        <div id="cell7" class="cell"></div>
-        <div id="cell8" class="cell"></div>
-        <div id="cell9" class="cell"></div>
-    </div>
-    <div id="restart-container" class="hidden restart">
-        <h4 id="message">Vuoi ricominciare?</h4>
-        <button id="restart-button" onclick="location.reload()">Reset</button>
-    </div>
+    <header class="site-header">
+        <h1>Tic Tac Toe</h1>
+        <p class="subtitle">Trascina la X o la O nella cella desiderata</p>
+        <p id="turn-info" class="turn-info">Turno: <span id="turn-player">X</span></p>
+    </header>
+
+    <main>
+        <div id="game-container">
+            <div id="Xbox" class="marker-box">
+                <div id="Xcell" class="marker x" draggable="true">X</div>
+            </div>
+
+            <div id="game-board" aria-label="Tic tac toe board">
+                <div id="cell1" class="cell"></div>
+                <div id="cell2" class="cell"></div>
+                <div id="cell3" class="cell"></div>
+                <div id="cell4" class="cell"></div>
+                <div id="cell5" class="cell"></div>
+                <div id="cell6" class="cell"></div>
+                <div id="cell7" class="cell"></div>
+                <div id="cell8" class="cell"></div>
+                <div id="cell9" class="cell"></div>
+            </div>
+
+            <div id="Obox" class="marker-box">
+                <div id="Ocell" class="marker o" draggable="true">O</div>
+            </div>
+        </div>
+
+        <div id="restart-container" class="hidden restart">
+            <h4 id="message">Vuoi ricominciare?</h4>
+            <button id="restart-button" onclick="location.reload()">Reset</button>
+        </div>
+    </main>
 </body>
 </html>
